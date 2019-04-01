@@ -7,6 +7,25 @@
 
 ### To Control the Servo (Linux)
 
+
+**Start Up**
+
+```
+sudo modprobe ftdi_sio
+sudo su
+echo "165C 0009" > /sys/bus/usb-serial/drivers/ftdi_sio/new_id
+
+```
+
+**Run The Programming**
+
+```
+cd build/src
+./position /dev/ttyUSB0
+```
+
+****
+
 Reference
 
 1. **[sugar_sweet](https://github.com/sugarsweetrobotics/libb3m)**

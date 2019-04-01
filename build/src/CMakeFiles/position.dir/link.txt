@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/position.dir/position.cpp.o  -o position -rdynamic libb3m.so -lpthread -Wl,-rpath,/home/ajay/work_space/official/Kondo_b3m/libb3m/build/src 

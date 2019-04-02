@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
   pb3m = new B3M(argv[1], BAUDRATE);
 
   pb3m->setMode(id, OPERATION_MODE_FREE);
-  pb3m->setGainPresetNumber(id, 1);
+  pb3m->setGainPresetNumber(id, 2);
   pb3m->setMode(id, OPERATION_MODE_NORMAL | CONTROL_MODE_VELOCITY);
   pb3m->setTargetVelocity(id, 10000); // 10 deg/sec * 100
 

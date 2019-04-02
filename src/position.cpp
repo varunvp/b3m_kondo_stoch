@@ -16,7 +16,7 @@ using namespace kondo;
 #define VERTICAL_DOWN 0
 #define VERTICAL_UP   18000
 
-#define HORIZONTAL_OPPOSITE_LED -9000
+#define HORIZONTAL_OPPOSITE_LED -8000
 #define HORIZONTAL_TOWARDS_LED   9000
 
 B3M* pb3m;

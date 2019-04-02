@@ -1,22 +1,46 @@
 #include <iostream>
-
-
 #include "b3m.h"
 #include "Console.h"
 
+#include <iostream>
+#include <csignal>
+#include <stdlib.h>
+#include <unistd.h>
+
+// #include <cstdlib>
+#include <cstring>
 
 using namespace kondo;
 
 #define BAUDRATE 1500000
 
+#define VELOCITY_MIN 122
+#define VELOCITY_MAX d28e7
+
+#define VELOCITY 40000
+
 
 B3M* pb3m;
+
+
+void signalHandler( int signum ) {
+  
+  std::cout << "Program Ended.\n";
+
+   // cleanup and close up stuff here  
+   // terminate program  
+  pb3m->setTargetVelocity(0, 0);
+  pb3m->setMode(0, OPERATION_MODE_FREE);
+  
+  ssr::exit_scr();
+  ssr::exit(signum);  
+}
 
 int  main(int argc, char* argv[]) {
   try {
     ssr::init_scr();
 
-  std::cout << "---- B3M Test Program ----" << std::endl;
+  std::cout << "---- Velocity Test Program ----" << std::endl;
   if (argc <= 1) {
     std::cout << "Invalid Usage." << std::endl;
     std::cout << std::endl;
@@ -40,17 +64,29 @@ int  main(int argc, char* argv[]) {
 
 **/
 
-  pb3m->setTargetVelocity(id, 15000); // 10 deg/sec * 100
-  ssr::Thread::Sleep(5000); 
+     // register signal SIGINT and signal handler  
+  signal(SIGINT, signalHandler);
+  
+  pb3m->setTargetVelocity(id, VELOCITY);
+
+  for(;;){
+   
+   // std::cout<<" Actual Velocity is" << pb3m->getActualVelocity(0) <<std::endl;
+   // ssr::Thread::Sleep(500); 
+   // break;
+  }
+  
+
 
   // for (;;) {
   //   ssr::Thread::Sleep(500);  
 
   // }
-  
+
   ssr::exit_scr();
-  pb3m->setTargetVelocity(id, 0);
-  pb3m->setMode(id, OPERATION_MODE_FREE);
+  pb3m->setTargetVelocity(0, 0);
+  pb3m->setMode(0, OPERATION_MODE_FREE);
+
 
   std::cout << "---- B3M Test Program End----" << std::endl;
   } catch (std::exception& e) {

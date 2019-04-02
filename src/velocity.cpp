@@ -14,10 +14,10 @@ using namespace kondo;
 
 #define BAUDRATE 1500000
 
-#define VELOCITY_MIN 122
-#define VELOCITY_MAX d28e7
+#define VELOCITY_MIN -32768 
+#define VELOCITY_MAX 32767
 
-#define VELOCITY 40000
+#define SET_VELOCITY 32767 // Units: (Value/100) deg/sec 
 
 
 B3M* pb3m;
@@ -67,7 +67,7 @@ int  main(int argc, char* argv[]) {
      // register signal SIGINT and signal handler  
   signal(SIGINT, signalHandler);
   
-  pb3m->setTargetVelocity(id, VELOCITY);
+  pb3m->setTargetVelocity(id, SET_VELOCITY);
 
   for(;;){
    

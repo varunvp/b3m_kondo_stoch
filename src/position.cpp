@@ -13,6 +13,9 @@ using namespace kondo;
 #define POSITION 18000
 
 
+
+// -32000  Mini Position
+// 32000 Max Position
 #define VERTICAL_DOWN 0
 #define VERTICAL_UP   18000
 

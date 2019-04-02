@@ -4,17 +4,41 @@
 #include "b3m.h"
 #include "Console.h"
 
-using namespace kondo;
 
+using namespace kondo;
 #define BAUDRATE 1500000
+
+
+#define TORQUE_MIN -32768
+#define TORQUE_MAX 32768
+
+#define SET_TORQUE 10000  // mili Newton meter
+
+
+#define VERTICAL_UP   18000
+
 
 B3M* pb3m;
 
-int main(int argc, char* argv[]) {
+
+void signalHandler( int signum ) {
+  
+  std::cout << "Program Ended.\n";
+
+   // cleanup and close up stuff here  
+   // terminate program  
+  pb3m->setTargetCurrent(0, 0);
+  pb3m->setMode(0, OPERATION_MODE_FREE);
+  
+  ssr::exit_scr();
+  ssr::exit(signum);  
+}
+
+int  main(int argc, char* argv[]) {
   try {
     ssr::init_scr();
 
-  std::cout << "---- B3M Test Program ----" << std::endl;
+  std::cout << "---- Impedance Test Program ----" << std::endl;
   if (argc <= 1) {
     std::cout << "Invalid Usage." << std::endl;
     std::cout << std::endl;
@@ -27,36 +51,23 @@ int main(int argc, char* argv[]) {
   pb3m = new B3M(argv[1], BAUDRATE);
 
   pb3m->setMode(id, OPERATION_MODE_FREE);
-  pb3m->setGainPresetNumber(id, 1);
-  pb3m->setMode(id, OPERATION_MODE_NORMAL | CONTROL_MODE_VELOCITY);
-  pb3m->setTargetVelocity(id, 10000); // 10 deg/sec * 100
+  pb3m->setGainPresetNumber(id, 2);
+  pb3m->setMode(id, OPERATION_MODE_NORMAL | CONTROL_MODE_POSITION );
 
-  for (int i = 0;i < 60;i++) {
-    ssr::clear_scr();
-  std::cout << "------------------------------------" << std::endl;
-  std::cout << "- COUNT : " << i+1 << "/60" << std::endl;
-  std::cout << "- ID  : " << id << std::endl;
-  std::cout << "- KP0 : " << pb3m->getKp0(id) << std::endl;
-  std::cout << "- KI0 : " << pb3m->getKi0(id) << std::endl;
-  std::cout << "- KD0 : " << pb3m->getKd0(id) << std::endl;
-  std::cout << "- KP1 : " << pb3m->getKp1(id) << std::endl;
-  std::cout << "- KI1 : " << pb3m->getKi1(id) << std::endl;
-  std::cout << "- KD1 : " << pb3m->getKd1(id) << std::endl;
-  std::cout << "- KP2 : " << pb3m->getKp2(id) << std::endl;
-  std::cout << "- KI2 : " << pb3m->getKi2(id) << std::endl;
-  std::cout << "- KD2 : " << pb3m->getKd2(id) << std::endl;
-  std::cout << "- MCU   TEMPERATURE : " << pb3m->getMCUTemperature(id) / 100.0 << std::endl;
-  std::cout << "- MOTOR TEMPERATURE : " << pb3m->getMotorTemperature(id) / 100.0 << std::endl;
-  std::cout << "- ENCODER TOTAL     : " << pb3m->getEncoderTotalCount(id) << std::endl;
-  std::cout << "------------------------------------" << std::endl;
+  
+ /**  Do Your Stuff Here  **/
 
-  ssr::Thread::Sleep(500);  
+  // signal(SIGINT, signalHandler);
+
+  // pb3m->setTargetCurrent(0, );
+
+  pb3m->setTargetPosition(0, VERTICAL_UP);
+
+  while (1) {
+    ssr::Thread::Sleep(700);
   }
-
-  ssr::exit_scr();
-  pb3m->setTargetVelocity(id, 0);
-  pb3m->setMode(id, OPERATION_MODE_FREE);
-
+  
+ 
   std::cout << "---- B3M Test Program End----" << std::endl;
   } catch (std::exception& e) {
     std::cout << "Exception : " << e.what() << std::endl;

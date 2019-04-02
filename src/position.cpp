@@ -28,7 +28,7 @@ int  main(int argc, char* argv[]) {
   try {
     ssr::init_scr();
 
-  std::cout << "---- B3M Test Program ----" << std::endl;
+  std::cout << "---- Position Test Program ----" << std::endl;
   if (argc <= 1) {
     std::cout << "Invalid Usage." << std::endl;
     std::cout << std::endl;

@@ -12,7 +12,7 @@ using namespace kondo;
 #define TORQUE_MIN -32768
 #define TORQUE_MAX 32768
 
-#define SET_TORQUE 10000  // mili Newton meter
+#define SET_TORQUE 1000  // mili Newton meter
 
 
 
@@ -26,10 +26,10 @@ void signalHandler( int signum ) {
 
    // cleanup and close up stuff here  
    // terminate program  
+  ssr::exit_scr();
   pb3m->setTargetCurrent(0, 0);
   pb3m->setMode(0, OPERATION_MODE_FREE);
   
-  ssr::exit_scr();
   ssr::exit(signum);  
 }
 
@@ -60,13 +60,17 @@ int  main(int argc, char* argv[]) {
 
   pb3m->setTargetCurrent(0, SET_TORQUE);
 
-  while (1) {
+  for (;;) {
+
+      pb3m->setTargetCurrent(0, SET_TORQUE);
+
+
 
   }
   
-  ssr::exit_scr();
-  pb3m->setTargetCurrent(0, 0);
-  pb3m->setMode(id, OPERATION_MODE_FREE);
+  // ssr::exit_scr();
+  // pb3m->setTargetCurrent(0, 0);
+  // pb3m->setMode(id, OPERATION_MODE_FREE);
 
   std::cout << "---- B3M Test Program End----" << std::endl;
   } catch (std::exception& e) {

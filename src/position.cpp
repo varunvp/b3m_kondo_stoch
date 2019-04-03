@@ -19,7 +19,7 @@ using namespace kondo;
 #define VERTICAL_DOWN 0
 #define VERTICAL_UP   18000
 
-#define HORIZONTAL_OPPOSITE_LED -8000
+#define HORIZONTAL_OPPOSITE_LED -9000
 #define HORIZONTAL_TOWARDS_LED   9000
 
 B3M* pb3m;
@@ -60,8 +60,15 @@ int  main(int argc, char* argv[]) {
   for (;;) {
 
     // Horizontal
-    pb3m->setTargetPosition(id, HORIZONTAL_TOWARDS_LED); // 10 deg/sec * 100
+    pb3m->setTargetPosition(id, HORIZONTAL_TOWARDS_LED); // 10 deg/sec
+    // std::cout <<" The Current is :  "<< pb3m->getActualCurrent(0) << std::endl;
     ssr::Thread::Sleep(700);  
+
+    // int16_t curr_val  = pb3m->getActualPosition(0);
+    // int16_t error_pos  = (curr_val - prev_val);
+    // int16_t filtrd_val = (prev_val + (0.8*error_pos) );    
+    // std::cout <<"Actual Value is: "<<pb3m->getActualPosition(0)<<"  Filter Value is: "<<filtrd_val<<std::endl;
+    // prev_val = curr_val;
     pb3m->setTargetPosition(id, HORIZONTAL_OPPOSITE_LED);
     ssr::Thread::Sleep(700);
   }

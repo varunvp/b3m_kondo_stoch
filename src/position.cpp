@@ -8,21 +8,24 @@
 using namespace kondo;
 
 #define BAUDRATE 1500000
-
-
-#define POSITION 18000
-
-
-
-// -32000  Mini Position
-// 32000 Max Position
 #define VERTICAL_DOWN 0
 #define VERTICAL_UP   18000
-
 #define HORIZONTAL_OPPOSITE_LED -9000
 #define HORIZONTAL_TOWARDS_LED   9000
 
 B3M* pb3m;
+
+void signalHandler( int signum ) {
+  
+  std::cout << "Program Ended.\n";
+
+   // cleanup and close up stuff here  
+   // terminate program  
+  ssr::exit_scr();
+  pb3m->setMode(0, OPERATION_MODE_FREE);
+  ssr::exit(signum);
+
+}
 
 int  main(int argc, char* argv[]) {
   try {
@@ -46,42 +49,23 @@ int  main(int argc, char* argv[]) {
 
   
 
-  // for (;;) {
-      
-  //   // Up and Down
-  //   pb3m->setTargetPosition(id, VERTICAL_UP); // 10 deg/sec * 100
-  //   ssr::Thread::Sleep(700);  
-  //   pb3m->setTargetPosition(id, VERTICAL_DOWN);
-  //   ssr::Thread::Sleep(700);
+ 
+  signal(SIGINT, signalHandler);
 
-  // }
-  
 
   for (;;) {
 
     // Horizontal
     pb3m->setTargetPosition(id, HORIZONTAL_TOWARDS_LED); // 10 deg/sec
-    // std::cout <<" The Current is :  "<< pb3m->getActualCurrent(0) << std::endl;
     ssr::Thread::Sleep(700);  
-
-    // int16_t curr_val  = pb3m->getActualPosition(0);
-    // int16_t error_pos  = (curr_val - prev_val);
-    // int16_t filtrd_val = (prev_val + (0.8*error_pos) );    
-    // std::cout <<"Actual Value is: "<<pb3m->getActualPosition(0)<<"  Filter Value is: "<<filtrd_val<<std::endl;
-    // prev_val = curr_val;
     pb3m->setTargetPosition(id, HORIZONTAL_OPPOSITE_LED);
     ssr::Thread::Sleep(700);
   }
  
 
-
-  
-  ssr::exit_scr();
-  pb3m->setMode(id, OPERATION_MODE_FREE);
-
-  std::cout << "---- B3M Test Program End----" << std::endl;
-  } catch (std::exception& e) {
-    std::cout << "Exception : " << e.what() << std::endl;
+  } 
+  catch (std::exception& e) {
+  std::cout << "Exception : " << e.what() << std::endl;
   }
   return 0;
 }

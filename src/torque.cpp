@@ -26,15 +26,14 @@ void signalHandler( int signum ) {
 
    // cleanup and close up stuff here  
    // terminate program  
-  ssr::exit_scr();
   pb3m->setTargetCurrent(0, 0);
   pb3m->setMode(0, OPERATION_MODE_FREE);
-  
+  ssr::exit_scr();
   ssr::exit(signum);  
 }
 
 int  main(int argc, char* argv[]) {
-  try {
+ 
     ssr::init_scr();
 
   std::cout << "---- Torque Test Program ----" << std::endl;
@@ -56,25 +55,19 @@ int  main(int argc, char* argv[]) {
   
  /**  Do Your Stuff Here  **/
 
+
+  // pb3m->setTargetCurrent(0, SET_TORQUE);
+
   signal(SIGINT, signalHandler);
 
-  pb3m->setTargetCurrent(0, SET_TORQUE);
 
   for (;;) {
 
       pb3m->setTargetCurrent(0, SET_TORQUE);
-
+      ssr::Thread::Sleep(500);  
 
 
   }
   
-  // ssr::exit_scr();
-  // pb3m->setTargetCurrent(0, 0);
-  // pb3m->setMode(id, OPERATION_MODE_FREE);
-
-  std::cout << "---- B3M Test Program End----" << std::endl;
-  } catch (std::exception& e) {
-    std::cout << "Exception : " << e.what() << std::endl;
-  }
   return 0;
 }

@@ -28,10 +28,9 @@ void signalHandler( int signum ) {
   std::cout << "Program Ended.\n";
 
    // cleanup and close up stuff here  
-   // terminate program  
+   // terminate program 
   pb3m->setTargetVelocity(0, 0);
   pb3m->setMode(0, OPERATION_MODE_FREE);
-  
   ssr::exit_scr();
   ssr::exit(signum);  
 }
@@ -57,36 +56,15 @@ int  main(int argc, char* argv[]) {
   pb3m->setMode(id, OPERATION_MODE_NORMAL | CONTROL_MODE_VELOCITY );
 
   
- /** 
-  ----------------> Do Your Stuff Here <-----------------------
-
-  1. 10000
-
-**/
-
-     // register signal SIGINT and signal handler  
+ /** ----------------> Do Your Stuff Here <----------------------- **/ 
   signal(SIGINT, signalHandler);
   
   pb3m->setTargetVelocity(id, SET_VELOCITY);
 
   for(;;){
    
-   // std::cout<<" Actual Velocity is" << pb3m->getActualVelocity(0) <<std::endl;
-   // ssr::Thread::Sleep(500); 
-   // break;
   }
   
-
-
-  // for (;;) {
-  //   ssr::Thread::Sleep(500);  
-
-  // }
-
-  ssr::exit_scr();
-  pb3m->setTargetVelocity(0, 0);
-  pb3m->setMode(0, OPERATION_MODE_FREE);
-
 
   std::cout << "---- B3M Test Program End----" << std::endl;
   } catch (std::exception& e) {

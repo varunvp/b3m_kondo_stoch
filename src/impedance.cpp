@@ -29,15 +29,14 @@ void signalHandler( int signum ) {
 
    // cleanup and close up stuff here  
    // terminate program  
-  ssr::exit_scr();
   pb3m->setTargetCurrent(0, 0);
   pb3m->setMode(0, OPERATION_MODE_FREE);
-  
+  ssr::exit_scr();
   ssr::exit(signum);  
 }
 
 int  main(int argc, char* argv[]) {
-  try {
+  
     ssr::init_scr();
 
   std::cout << "---- Torque Test Program ----" << std::endl;
@@ -63,12 +62,11 @@ int  main(int argc, char* argv[]) {
 
 
 
-  pb3m->setTargetCurrent(0, 0);
+  // pb3m->setTargetCurrent(0, 0);
 
-  // prev_val = 0;
-  // stiffness = 0;
+  
 
-  while (1) {
+  for (;;) {
 
 
   /** Get the Joint Angle and Filter It **/
@@ -82,7 +80,7 @@ int  main(int argc, char* argv[]) {
   /** Calculate the error and fix the stiffness **/
   int16_t error_pos  =  filtrd_val - SET_POINT;
 
-    if (error_pos < 20 && error_pos > -20)
+    if (error_pos < 2 && error_pos > -2)
 
     {
       stiffness = 0;
@@ -103,17 +101,11 @@ int  main(int argc, char* argv[]) {
 
   /**Set [the Current Value to the previous value **/
   prev_val = curr_val;
-
-
-  }
   
-  // ssr::exit_scr();
-  // pb3m->setTargetCurrent(0, 0);
-  // pb3m->setMode(id, OPERATION_MODE_FREE);
+  ssr::Thread::Sleep(0.1);  
 
-  std::cout << "---- B3M Test Program End----" << std::endl;
-  } catch (std::exception& e) {
-    std::cout << "Exception : " << e.what() << std::endl;
+
   }
+
   return 0;
 }

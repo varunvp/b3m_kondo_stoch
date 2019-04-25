@@ -19,13 +19,18 @@ echo "165C 0009" > /sys/bus/usb-serial/drivers/ftdi_sio/new_id
 
 **To Configure Build**
 ```
-cd build/
-cmake .
+rm -r build/
+mkdir build & cd build
+cmake ../
 ```
 
 **Then, To Build It**
 ```
 cmake --build .
+```
+or
+```
+make
 ```
 
 **Run The Programming**

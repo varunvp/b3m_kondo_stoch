@@ -5,6 +5,7 @@
 2. [Software](https://kondo-robot.com/faq/b3m-series-software-manualenglish) [[.pdf]](https://kondo-robot.com/w/wp-content/uploads/B3M_SoftwareManual1.2.0.2_en.pdf)
 
 
+
 ### To Control the Servo (Linux)
 
 
@@ -72,10 +73,24 @@ Reference
 
 ### To Control the Servo (Windows)
 
+Do this to check if the sevvo, adapter and everything is fine and also to change the **servo ID**
+
 **From their Software**
 
+**Reference**
 1. [Let's move B3M servomotor (Preparation (1))](https://kondo-robot.com/faq/b3m_settings1)
 2. [Let's run B3M servomotor (Preparation (2))](https://kondo-robot.com/faq/b3m_settings2)
+
+**Steps**
+
+1. [Installation of driver](https://kondo-robot.com/w/wp-content/uploads/KO-Driver2015.zip)
+2. [Download the B3M software](https://kondo-robot.com/w/wp-content/uploads/B3M_Manager_V1132.zip)
+3. bps = 1500000 and ID = 0 and check the COM port
+4. Then  click Read all
+5. Go to **Options and Status**, Then select normal (run mode) and position (control) and then write
+6. Check the servo by moving the scroll bar in **servo paprameters**
+
+
 
 **From Microsoft Visual Studio**
 1. [Let's run B3M servomotor (C # Preparation)](https://kondo-robot.com/faq/b3mwinprogram1)

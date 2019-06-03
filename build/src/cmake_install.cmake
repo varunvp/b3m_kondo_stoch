@@ -1,4 +1,4 @@
-# Install script for directory: /home/ajay/work_space/official/Kondo_b3m/libb3m/src
+# Install script for directory: /home/ajay/1_work_space/rbccps/stoch2/b3m/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libb3m.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ajay/work_space/official/Kondo_b3m/libb3m/build/src/libb3m.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ajay/1_work_space/rbccps/stoch2/b3m/build/src/libb3m.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libb3m.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libb3m.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -55,12 +55,12 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/b3m_demo"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ajay/work_space/official/Kondo_b3m/libb3m/build/src/b3m_demo")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ajay/1_work_space/rbccps/stoch2/b3m/build/src/b3m_demo")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/b3m_demo" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/b3m_demo")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/b3m_demo"
-         OLD_RPATH "/home/ajay/work_space/official/Kondo_b3m/libb3m/build/src:"
+         OLD_RPATH "/home/ajay/1_work_space/rbccps/stoch2/b3m/build/src:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/b3m_demo")
@@ -72,7 +72,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/b3m/b3mDepends.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/b3m/b3mDepends.cmake"
-         "/home/ajay/work_space/official/Kondo_b3m/libb3m/build/src/CMakeFiles/Export/lib/b3m/b3mDepends.cmake")
+         "/home/ajay/1_work_space/rbccps/stoch2/b3m/build/src/CMakeFiles/Export/lib/b3m/b3mDepends.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/b3m/b3mDepends-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -81,9 +81,9 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/b3m" TYPE FILE FILES "/home/ajay/work_space/official/Kondo_b3m/libb3m/build/src/CMakeFiles/Export/lib/b3m/b3mDepends.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/b3m" TYPE FILE FILES "/home/ajay/1_work_space/rbccps/stoch2/b3m/build/src/CMakeFiles/Export/lib/b3m/b3mDepends.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/b3m" TYPE FILE FILES "/home/ajay/work_space/official/Kondo_b3m/libb3m/build/src/CMakeFiles/Export/lib/b3m/b3mDepends-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/b3m" TYPE FILE FILES "/home/ajay/1_work_space/rbccps/stoch2/b3m/build/src/CMakeFiles/Export/lib/b3m/b3mDepends-noconfig.cmake")
   endif()
 endif()
 

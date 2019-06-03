@@ -1,1 +1,1 @@
-/usr/bin/c++      CMakeFiles/velocity.dir/velocity.cpp.o  -o velocity -rdynamic libb3m.so -lpthread -Wl,-rpath,/home/ajay/work_space/official/Kondo_b3m/libb3m/build/src 
+/usr/bin/c++      CMakeFiles/velocity.dir/velocity.cpp.o  -o velocity -rdynamic libb3m.so -lpthread -Wl,-rpath,/home/ajay/1_work_space/rbccps/stoch2/b3m/build/src 

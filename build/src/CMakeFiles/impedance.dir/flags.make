@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ajay/work_space/official/Kondo_b3m/libb3m/src/../include -I/home/ajay/work_space/official/Kondo_b3m/libb3m/src/../libaqua/include 
+CXX_INCLUDES = -I/home/ajay/1_work_space/rbccps/stoch2/b3m/src/../include -I/home/ajay/1_work_space/rbccps/stoch2/b3m/src/../libaqua/include 
 

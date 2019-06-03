@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ajay/work_space/official/Kondo_b3m/libb3m
+CMAKE_SOURCE_DIR = /home/ajay/1_work_space/rbccps/stoch2/b3m
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ajay/work_space/official/Kondo_b3m/libb3m/build
+CMAKE_BINARY_DIR = /home/ajay/1_work_space/rbccps/stoch2/b3m/build
 
 #=============================================================================
 # Directory level rules for directory include
@@ -112,7 +112,7 @@ src/preinstall:
 src/CMakeFiles/b3m.dir/all:
 	$(MAKE) -f src/CMakeFiles/b3m.dir/build.make src/CMakeFiles/b3m.dir/depend
 	$(MAKE) -f src/CMakeFiles/b3m.dir/build.make src/CMakeFiles/b3m.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles --progress-num=1,2 "Built target b3m"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles --progress-num=1,2 "Built target b3m"
 .PHONY : src/CMakeFiles/b3m.dir/all
 
 # Include target in all.
@@ -122,9 +122,9 @@ all: src/CMakeFiles/b3m.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/b3m.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/b3m.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/b3m.dir/rule
 
 # Convenience name for target.
@@ -149,7 +149,7 @@ clean: src/CMakeFiles/b3m.dir/clean
 src/CMakeFiles/b3m_demo.dir/all: src/CMakeFiles/b3m.dir/all
 	$(MAKE) -f src/CMakeFiles/b3m_demo.dir/build.make src/CMakeFiles/b3m_demo.dir/depend
 	$(MAKE) -f src/CMakeFiles/b3m_demo.dir/build.make src/CMakeFiles/b3m_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles --progress-num=3,4 "Built target b3m_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles --progress-num=3,4 "Built target b3m_demo"
 .PHONY : src/CMakeFiles/b3m_demo.dir/all
 
 # Include target in all.
@@ -159,9 +159,9 @@ all: src/CMakeFiles/b3m_demo.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/b3m_demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/b3m_demo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/b3m_demo.dir/rule
 
 # Convenience name for target.
@@ -186,7 +186,7 @@ clean: src/CMakeFiles/b3m_demo.dir/clean
 src/CMakeFiles/position.dir/all: src/CMakeFiles/b3m.dir/all
 	$(MAKE) -f src/CMakeFiles/position.dir/build.make src/CMakeFiles/position.dir/depend
 	$(MAKE) -f src/CMakeFiles/position.dir/build.make src/CMakeFiles/position.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles --progress-num=7,8 "Built target position"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles --progress-num=7,8 "Built target position"
 .PHONY : src/CMakeFiles/position.dir/all
 
 # Include target in all.
@@ -196,9 +196,9 @@ all: src/CMakeFiles/position.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/position.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/position.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/position.dir/rule
 
 # Convenience name for target.
@@ -223,7 +223,7 @@ clean: src/CMakeFiles/position.dir/clean
 src/CMakeFiles/torque.dir/all: src/CMakeFiles/b3m.dir/all
 	$(MAKE) -f src/CMakeFiles/torque.dir/build.make src/CMakeFiles/torque.dir/depend
 	$(MAKE) -f src/CMakeFiles/torque.dir/build.make src/CMakeFiles/torque.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles --progress-num=9,10 "Built target torque"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles --progress-num=9,10 "Built target torque"
 .PHONY : src/CMakeFiles/torque.dir/all
 
 # Include target in all.
@@ -233,9 +233,9 @@ all: src/CMakeFiles/torque.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/torque.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/torque.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/torque.dir/rule
 
 # Convenience name for target.
@@ -260,7 +260,7 @@ clean: src/CMakeFiles/torque.dir/clean
 src/CMakeFiles/velocity.dir/all: src/CMakeFiles/b3m.dir/all
 	$(MAKE) -f src/CMakeFiles/velocity.dir/build.make src/CMakeFiles/velocity.dir/depend
 	$(MAKE) -f src/CMakeFiles/velocity.dir/build.make src/CMakeFiles/velocity.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles --progress-num=11,12 "Built target velocity"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles --progress-num=11,12 "Built target velocity"
 .PHONY : src/CMakeFiles/velocity.dir/all
 
 # Include target in all.
@@ -270,9 +270,9 @@ all: src/CMakeFiles/velocity.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/velocity.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/velocity.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/velocity.dir/rule
 
 # Convenience name for target.
@@ -297,7 +297,7 @@ clean: src/CMakeFiles/velocity.dir/clean
 src/CMakeFiles/impedance.dir/all: src/CMakeFiles/b3m.dir/all
 	$(MAKE) -f src/CMakeFiles/impedance.dir/build.make src/CMakeFiles/impedance.dir/depend
 	$(MAKE) -f src/CMakeFiles/impedance.dir/build.make src/CMakeFiles/impedance.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles --progress-num=5,6 "Built target impedance"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles --progress-num=5,6 "Built target impedance"
 .PHONY : src/CMakeFiles/impedance.dir/all
 
 # Include target in all.
@@ -307,9 +307,9 @@ all: src/CMakeFiles/impedance.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/impedance.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/impedance.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/work_space/official/Kondo_b3m/libb3m/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ajay/1_work_space/rbccps/stoch2/b3m/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/impedance.dir/rule
 
 # Convenience name for target.

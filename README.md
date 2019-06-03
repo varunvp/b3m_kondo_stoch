@@ -15,7 +15,7 @@
 sudo modprobe ftdi_sio
 sudo su
 echo "165C 0009" > /sys/bus/usb-serial/drivers/ftdi_sio/new_id
-
+exit
 ```
 
 **To Configure Build**

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ajay/work_space/official/Kondo_b3m/libb3m/src/velocity.cpp" "/home/ajay/work_space/official/Kondo_b3m/libb3m/build/src/CMakeFiles/velocity.dir/velocity.cpp.o"
+  "/home/ajay/1_work_space/rbccps/stoch2/b3m/src/velocity.cpp" "/home/ajay/1_work_space/rbccps/stoch2/b3m/build/src/CMakeFiles/velocity.dir/velocity.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ajay/work_space/official/Kondo_b3m/libb3m/build/src/CMakeFiles/b3m.dir/DependInfo.cmake"
+  "/home/ajay/1_work_space/rbccps/stoch2/b3m/build/src/CMakeFiles/b3m.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

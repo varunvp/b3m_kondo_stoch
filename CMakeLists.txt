@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 project(b3m)
+add_compile_options(-std=c++11)
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
    # Mac OS X specific code

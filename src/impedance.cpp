@@ -31,8 +31,8 @@ void signalHandler( int signum ) {
    // terminate program  
   pb3m->setTargetCurrent(0, 0);
   pb3m->setMode(0, OPERATION_MODE_FREE);
-  ssr::exit_scr();
-  ssr::exit(signum);  
+  // ssr::exit_scr();
+  // ssr::exit(signum);  
 }
 
 int  main(int argc, char* argv[]) {

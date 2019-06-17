@@ -41,7 +41,7 @@ namespace kondo {
 
   static const uint8_t ADDRESS_MCU_TEMPERATURE = 0x44;
   static const uint8_t ADDRESS_MOTOR_TEMPERATURE = 0x46;
-  static const uint8_t ADDRESS_MOTOR_CURRENT = 0x46;
+  static const uint8_t ADDRESS_MOTOR_CURRENT = 0x48;
 
 
 };

@@ -178,11 +178,11 @@ type.h
 stdint.h
 -
 
-/home/ajay/1_work_space/rbccps/stoch2/b3m/src/position.cpp
+/home/varun/stoch_2_0/b3m/src/position.cpp
 iostream
 -
 b3m.h
-/home/ajay/1_work_space/rbccps/stoch2/b3m/src/b3m.h
+/home/varun/stoch_2_0/b3m/src/b3m.h
 Console.h
-/home/ajay/1_work_space/rbccps/stoch2/b3m/src/Console.h
+/home/varun/stoch_2_0/b3m/src/Console.h
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/ajay/1_work_space/rbccps/stoch2/b3m/include
+# Install script for directory: /home/varun/stoch_2_0/b3m/include
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,6 +33,6 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "library")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/b3m-1.0" TYPE FILE FILES "/home/ajay/1_work_space/rbccps/stoch2/b3m/include/b3m.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/b3m-1.0" TYPE FILE FILES "/home/varun/stoch_2_0/b3m/include/b3m.h")
 endif()
 

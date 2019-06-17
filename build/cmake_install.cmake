@@ -1,4 +1,4 @@
-# Install script for directory: /home/ajay/1_work_space/rbccps/stoch2/b3m
+# Install script for directory: /home/varun/stoch_2_0/b3m
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,15 +34,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "library")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b3m-1.0/example" TYPE FILE FILES
-    "/home/ajay/1_work_space/rbccps/stoch2/b3m/example/CMakeLists.txt"
-    "/home/ajay/1_work_space/rbccps/stoch2/b3m/example/demo.cpp"
+    "/home/varun/stoch_2_0/b3m/example/CMakeLists.txt"
+    "/home/varun/stoch_2_0/b3m/example/demo.cpp"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ajay/1_work_space/rbccps/stoch2/b3m/build/include/cmake_install.cmake")
-  include("/home/ajay/1_work_space/rbccps/stoch2/b3m/build/src/cmake_install.cmake")
+  include("/home/varun/stoch_2_0/b3m/build/include/cmake_install.cmake")
+  include("/home/varun/stoch_2_0/b3m/build/src/cmake_install.cmake")
 
 endif()
 
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ajay/1_work_space/rbccps/stoch2/b3m/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/varun/stoch_2_0/b3m/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

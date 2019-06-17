@@ -17,7 +17,7 @@ using namespace kondo;
 #define VELOCITY_MIN -32768 
 #define VELOCITY_MAX 32767
 
-#define SET_VELOCITY 32767 // Units: (Value/100) deg/sec 
+#define SET_VELOCITY 1000 // Units: (Value/100) deg/sec 
 
 
 B3M* pb3m;
@@ -31,8 +31,8 @@ void signalHandler( int signum ) {
    // terminate program 
   pb3m->setTargetVelocity(0, 0);
   pb3m->setMode(0, OPERATION_MODE_FREE);
-  ssr::exit_scr();
-  ssr::exit(signum);  
+  // ssr::exit_scr();
+  // ssr::exit(signum);  
 }
 
 int  main(int argc, char* argv[]) {
@@ -62,7 +62,8 @@ int  main(int argc, char* argv[]) {
   pb3m->setTargetVelocity(id, SET_VELOCITY);
 
   for(;;){
-   
+    int16_t vel = pb3m->getActualVelocity(0);
+    std::cout<<vel<<std::endl;
   }
   
 

@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include <chrono>
 
 #include "b3m.h"
 #include "Console.h"
@@ -12,14 +13,11 @@ using namespace kondo;
 #define TORQUE_MIN -32768
 #define TORQUE_MAX 32768
 
-#define SET_TORQUE 1000  // mili Newton meter
-
-
-
+#define SET_TORQUE 300  // mili Newton meter
 
 B3M* pb3m;
-
-
+int current;
+int encoder;
 void signalHandler( int signum ) {
   
   std::cout << "Program Ended.\n";
@@ -28,13 +26,13 @@ void signalHandler( int signum ) {
    // terminate program  
   pb3m->setTargetCurrent(0, 0);
   pb3m->setMode(0, OPERATION_MODE_FREE);
-  ssr::exit_scr();
-  ssr::exit(signum);  
+  // ssr::exit_scr();
+  // ssr::exit(signum);  
 }
 
 int  main(int argc, char* argv[]) {
  
-    ssr::init_scr();
+    // ssr::init_scr();
 
   std::cout << "---- Torque Test Program ----" << std::endl;
   if (argc <= 1) {
@@ -60,14 +58,39 @@ int  main(int argc, char* argv[]) {
 
   signal(SIGINT, signalHandler);
 
+  auto start_loop = std::chrono::steady_clock::now();
+  float time_loop = 15;
 
-  for (;;) {
+  while(std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start_loop).count() < time_loop) 
+  {
+    auto start = std::chrono::steady_clock::now();
 
-      pb3m->setTargetCurrent(0, SET_TORQUE);
-      ssr::Thread::Sleep(500);  
+    pb3m->setTargetCurrent(0, SET_TORQUE);
+
+    current = pb3m->getActualCurrent(0);
+
+    int16_t vel = pb3m->getActualVelocity(0);
+    std::cout<<"vel: "<<vel<<std::endl;
+    // auto end = std::chrono::steady_clock::now();
+    encoder = pb3m->getEncoderCount(0);
+    // total_encoder = pb3m->getEncoderTotalCount(0);
+    // motor_temp = pb3m->getMotorTemperature(0);
+    // mcu_temp = pb3m->getMCUTemperature(0);
+    ssr::Thread::Sleep(1);  
+
+    auto end = std::chrono::steady_clock::now();
+    std::cout << current << ","  << encoder << ",";
+    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << std::endl;
+    //<< total_encoder << "\t\t" << motor_temp << "\t\t" << std::endl;
 
 
   }
-  
+
+  std::cout << "Program Ended.\n";
+
+   // cleanup and close up stuff here  
+   // terminate program  
+  pb3m->setTargetCurrent(0, 0);
+  pb3m->setMode(0, OPERATION_MODE_FREE);
   return 0;
 }

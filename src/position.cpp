@@ -23,7 +23,7 @@ void signalHandler( int signum ) {
    // terminate program  
   ssr::exit_scr();
   pb3m->setMode(0, OPERATION_MODE_FREE);
-  ssr::exit(signum);
+  // ssr::exit(signum);
 
 }
 

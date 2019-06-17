@@ -1,1 +1,1 @@
-/usr/bin/c++      CMakeFiles/torque.dir/torque.cpp.o  -o torque -rdynamic libb3m.so -lpthread -Wl,-rpath,/home/ajay/1_work_space/rbccps/stoch2/b3m/build/src 
+/usr/bin/c++      CMakeFiles/torque.dir/torque.cpp.o  -o torque -rdynamic libb3m.so -lpthread -Wl,-rpath,/home/varun/stoch_2_0/b3m/build/src 

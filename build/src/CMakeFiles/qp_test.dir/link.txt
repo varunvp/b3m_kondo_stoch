@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/qp_test.dir/qp_test.cpp.o  -o qp_test  -L/home/varun/stoch_2_0/qpOASES/bin -rdynamic libb3m.so -lpthread -lqpOASES -Wl,-rpath,/home/varun/stoch_2_0/qpOASES/bin:/home/varun/stoch_2_0/b3m_old/build/src 

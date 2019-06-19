@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/b3m_demo.dir/demo.cpp.o  -o CMakeFiles/CMakeRelink.dir/b3m_demo  -L/home/varun/stoch_2_0/qpOASES/bin -rdynamic libb3m.so -lpthread 

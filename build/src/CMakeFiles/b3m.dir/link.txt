@@ -1,1 +1,1 @@
-/usr/bin/c++  -fPIC   -shared -Wl,-soname,libb3m.so -o libb3m.so CMakeFiles/b3m.dir/b3m.cpp.o 
+/usr/bin/c++  -fPIC   -shared -Wl,-soname,libb3m.so -o libb3m.so CMakeFiles/b3m.dir/b3m.cpp.o  -L/home/varun/stoch_2_0/qpOASES/bin 

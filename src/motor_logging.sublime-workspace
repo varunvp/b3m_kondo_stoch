@@ -1,0 +1,1565 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mi",
+				"milliseconds\tmilliseconds"
+			],
+			[
+				"curr",
+				"current_time\ttime_t current_time"
+			],
+			[
+				"get",
+				"getMCUTemperature\tint16_t getMCUTemperature(const ID_t id)"
+			],
+			[
+				"vel",
+				"getActualVelocity\tint16_t getActualVelocity(const ID_t id)"
+			],
+			[
+				"curre",
+				"Current"
+			],
+			[
+				"getAn",
+				"getActualPosition\tint16_t getActualPosition(const ID_t id)"
+			],
+			[
+				"enco",
+				"getEncoderTotalCount\tint32_t getEncoderTotalCount(const ID_t id)"
+			],
+			[
+				"cu",
+				"getActualCurrent\tint16_t getActualCurrent(const ID_t id)"
+			],
+			[
+				"sto",
+				"stoch_two_urdf"
+			],
+			[
+				"stoc",
+				"stoch_two_rigid"
+			],
+			[
+				"fl_hip_",
+				"motor_fl_upper_hip_joint"
+			],
+			[
+				"z",
+				"zCmd"
+			],
+			[
+				"max",
+				"max_vel\tstatement"
+			],
+			[
+				"x",
+				"xCmd"
+			],
+			[
+				"Twis",
+				"TwistStamped"
+			],
+			[
+				"ar",
+				"arming"
+			],
+			[
+				"pos",
+				"pose_subscriber"
+			],
+			[
+				"take",
+				"takeoff_resp\tstatement"
+			],
+			[
+				"Command",
+				"CommandTOL\tmodule"
+			],
+			[
+				"Se",
+				"ServiceProxy"
+			],
+			[
+				"four",
+				"fourcc"
+			],
+			[
+				"Vide",
+				"VideoWriter_fourcc\tfunction"
+			],
+			[
+				"vide",
+				"VideoCapture\tclass"
+			],
+			[
+				"cv",
+				"cv2\tmodule"
+			],
+			[
+				"ros",
+				"ROSAction"
+			],
+			[
+				"set",
+				"setNextForm\tfunction"
+			],
+			[
+				"next",
+				"setNextFormPrevious\tfunction"
+			],
+			[
+				"do",
+				"do_run"
+			],
+			[
+				"COLOR_BGR2LAB",
+				"COLOR_BGR2LAB\tinstance"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"std",
+				"stdscr\tWINDOW * stdscr"
+			],
+			[
+				"kp",
+				"Kp_y\tfloat Kp_y"
+			],
+			[
+				"Kp",
+				"Kp_x\tfloat Kp_x"
+			],
+			[
+				"K",
+				"Kp_x\tfloat Kp_x"
+			],
+			[
+				"mv",
+				"mvinnstr\tmvinnstr(y, x, s, n)"
+			],
+			[
+				"kd",
+				"Kd_y"
+			],
+			[
+				"messa",
+				"message_generation"
+			],
+			[
+				"bui",
+				"build_depend"
+			],
+			[
+				"exe",
+				"exec_depend"
+			],
+			[
+				"gene",
+				"generate_messages"
+			],
+			[
+				"my_",
+				"my_pkg"
+			],
+			[
+				"new",
+				"new_pub"
+			],
+			[
+				"test",
+				"test_vs2"
+			],
+			[
+				"dow",
+				"down_cam_boxarea"
+			],
+			[
+				"ex",
+				"exit\tfunction"
+			],
+			[
+				"ti",
+				"Time\tclass"
+			],
+			[
+				"hol",
+				"hold_switch_time\tstatement"
+			],
+			[
+				"T",
+				"TAKEOFF"
+			],
+			[
+				"mavros",
+				"mavros_msgs"
+			],
+			[
+				"l",
+				"link_1"
+			],
+			[
+				"inter",
+				"interactive"
+			],
+			[
+				"main",
+				"main_thread\tstatement"
+			],
+			[
+				"isce",
+				"isCentredInZ\tbool isCentredInZ"
+			],
+			[
+				"y",
+				"y_offset"
+			],
+			[
+				"red",
+				"redLower\tstatement"
+			],
+			[
+				"cont",
+				"continue\tkeyword"
+			],
+			[
+				"res",
+				"resize\tfunction"
+			],
+			[
+				"upp",
+				"upper_red1\tstatement"
+			],
+			[
+				"im",
+				"img2gray\tstatement"
+			],
+			[
+				"MAIN",
+				"main_thread\tstatement"
+			],
+			[
+				"gl",
+				"gl_slider\tstatement"
+			],
+			[
+				"app",
+				"approx\tstatement"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"wa",
+				"waitKey"
+			],
+			[
+				"desi",
+				"desired_z\tstatement"
+			],
+			[
+				"de",
+				"desired_y\tstatement"
+			],
+			[
+				"diss",
+				"disst2"
+			],
+			[
+				"hei",
+				"height\tstatement"
+			],
+			[
+				"Height",
+				"height\tstatement"
+			],
+			[
+				"heig",
+				"flight_height"
+			],
+			[
+				"dest",
+				"x_destination"
+			],
+			[
+				"des",
+				"x_destination"
+			],
+			[
+				"gri",
+				"gripped_object"
+			],
+			[
+				"norm",
+				"norm_force"
+			],
+			[
+				"nor",
+				"norm_force"
+			],
+			[
+				"Get",
+				"GetName"
+			],
+			[
+				"dro",
+				"drone_position\tignition::math::Pose3d drone_position"
+			],
+			[
+				"gimbal",
+				"gimbal_link\tint gimbal_link"
+			],
+			[
+				"dr",
+				"drone_roll\tdouble drone_roll"
+			],
+			[
+				"Ro",
+				"Roll"
+			],
+			[
+				"gimab",
+				"gimbal_position\tignition::math::Pose3d gimbal_position"
+			],
+			[
+				"drone",
+				"drone_position\tignition::math::Pose3d drone_position"
+			],
+			[
+				"bas",
+				"base_link\tgazebo::physics::LinkPtr base_link"
+			],
+			[
+				"li",
+				"LinkPtr\tLinkPtr"
+			],
+			[
+				"ma",
+				"math\tmath"
+			],
+			[
+				"math4",
+				"math4/ignition/math/Vector3.hh\t/usr/include/ignition"
+			],
+			[
+				"math",
+				"math4/ignition/math.hh\t/usr/include/ignition"
+			],
+			[
+				"dor",
+				"drone_position\tint drone_position"
+			],
+			[
+				"loca",
+				"local_origin"
+			],
+			[
+				"sen",
+				"sendTransform"
+			],
+			[
+				"twi",
+				"twist_obj\tfunction"
+			],
+			[
+				"is",
+				"is_switch_active\tstatement"
+			],
+			[
+				"iss",
+				"is_switch_active\tstatement"
+			],
+			[
+				"last",
+				"last_time\tstatement"
+			],
+			[
+				"glo",
+				"global"
+			],
+			[
+				"oth",
+				"other_drone_target\tstatement"
+			],
+			[
+				"poin",
+				"point_pub\tstatement"
+			],
+			[
+				"cur",
+				"x_current"
+			],
+			[
+				"other",
+				"other_drone_target\tstatement"
+			],
+			[
+				"sta",
+				"stamp"
+			],
+			[
+				"poi",
+				"point_pub\tstatement"
+			],
+			[
+				"go",
+				"go_to_point"
+			],
+			[
+				"sepe",
+				"x_seperation"
+			],
+			[
+				"point",
+				"point_pub"
+			],
+			[
+				"co",
+				"cos\tfunction"
+			],
+			[
+				"ph",
+				"phi_2\tstatement"
+			],
+			[
+				"lon2",
+				"lon2-lon1"
+			],
+			[
+				"lo",
+				"longitude"
+			],
+			[
+				"othe",
+				"other_drone_coords\tstatement"
+			],
+			[
+				"lat",
+				"latitude"
+			],
+			[
+				"po",
+				"pose"
+			],
+			[
+				"home",
+				"home_position"
+			],
+			[
+				"gp",
+				"gps_point"
+			],
+			[
+				"mpc",
+				"mpc_pose_array\tstatement"
+			],
+			[
+				"x_vel",
+				"x_velocity_des\tstatement"
+			],
+			[
+				"xa",
+				"x_array\tstatement"
+			],
+			[
+				"homepos",
+				"home_pos_cb\tfunction"
+			],
+			[
+				"ve",
+				"vel_pub\tstatement"
+			],
+			[
+				"pub",
+				"publish\tfunction"
+			],
+			[
+				"uav",
+				"uav_y_vel\tstatement"
+			],
+			[
+				"Publ",
+				"publish\tfunction"
+			],
+			[
+				"bo",
+				"box_marker_1\tstatement"
+			],
+			[
+				"local",
+				"local_position"
+			],
+			[
+				"intera",
+				"interaction_mode"
+			],
+			[
+				"move",
+				"move_x"
+			],
+			[
+				"box",
+				"box_control\tstatement"
+			],
+			[
+				"Inter",
+				"InteractiveMarkerControl"
+			],
+			[
+				"yvel",
+				"y_velocity_des\tstatement"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					""
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					"build dependences"
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					"build with debug flag"
+				],
+				[
+					"Packages/User/CMake Compile.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CMake List Add.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CMake.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CMake.sublime-build",
+					"DroneCore Run"
+				],
+				[
+					"Packages/User/CMake.sublime-build",
+					"Gazebo Run"
+				],
+				[
+					"Packages/User/MultiUAVLaunch.sublime-build",
+					""
+				],
+				[
+					"Packages/User/URDF check.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/CMake.sublime-build",
+				"Gazebo Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					""
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					"build dependences"
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					"build with debug flag"
+				],
+				[
+					"Packages/User/CMake Compile.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CMake List Add.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CMake.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CMake.sublime-build",
+					"DroneCore Run"
+				],
+				[
+					"Packages/User/CMake.sublime-build",
+					"Gazebo Run"
+				],
+				[
+					"Packages/User/MultiUAVLaunch.sublime-build",
+					""
+				],
+				[
+					"Packages/User/URDF check.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/CMake.sublime-build",
+				"DroneCore Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					""
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					"build dependences"
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					"build with debug flag"
+				],
+				[
+					"Packages/User/CMake Compile.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CMake List Add.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CMake.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CMake.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/MultiUAVLaunch.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/CMake.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					""
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					"build dependences"
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					"build with debug flag"
+				],
+				[
+					"Packages/User/CMake Compile.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CMake List Add.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CMake.sublime-build",
+					""
+				],
+				[
+					"Packages/User/MultiUAVLaunch.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/CMake.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/C++Execute.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++Execute.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/C++Execute.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++Execute.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/CMake.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/CMake.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/C++Execute.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++Execute.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/DroneCoreExecute.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/DroneCoreExecute.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++Execute.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++Execute.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C++Execute.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"git stat",
+				"git: status"
+			],
+			[
+				"dis",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"schem",
+				"UI: Select Color Scheme"
+			],
+			[
+				"stat",
+				"git: status"
+			],
+			[
+				"",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"sche",
+				"UI: Select Color Scheme"
+			],
+			[
+				"scheme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"enab",
+				"Anaconda: Enable linting on this file"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"git sta",
+				"git: status"
+			],
+			[
+				"git s",
+				"git: status"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"git: status"
+			],
+			[
+				"git ",
+				"git: status"
+			],
+			[
+				"easy",
+				"EasyClangComplete: Settings"
+			],
+			[
+				"eas",
+				"EasyClangComplete: Show all errors"
+			],
+			[
+				"status",
+				"git: status"
+			],
+			[
+				"git che",
+				"git: checkout"
+			],
+			[
+				"git status",
+				"git: status"
+			],
+			[
+				"git pus",
+				"git: push"
+			],
+			[
+				"git dif",
+				"git: diff"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
+				"Install Package Control"
+			],
+			[
+				"remote",
+				"git: remote add"
+			],
+			[
+				"disa",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"git remote",
+				"github: set remote for integration"
+			],
+			[
+				"git add",
+				"git: remote add"
+			],
+			[
+				"git pu",
+				"git: push"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"git remot",
+				"git: remote add"
+			],
+			[
+				"git fe",
+				"git: fetch"
+			],
+			[
+				"git st",
+				"git: status"
+			],
+			[
+				"gitsa",
+				"GitSavvy: help"
+			],
+			[
+				"lint",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 461.0
+	},
+	"console":
+	{
+		"height": 312.0,
+		"history":
+		[
+			"a+b",
+			"b=2",
+			"a=1",
+			"hello",
+			"import socket; socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(/home/varun/.local/share/anaconda/run/DroneCore/anaconda.sock)",
+			"import socket; socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(\"/home/varun/.local/share/anaconda/run/DroneCore/anaconda.sock\")",
+			"import socket; socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(/home/varun/.local/share/anaconda/run/DroneCore/anaconda.sock)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/varun/stoch_2_0/b3m"
+	],
+	"file_history":
+	[
+		"/home/varun/stoch_2_0/b3m/src/plot.py",
+		"/home/varun/stoch_2_0/b3m/include/b3mdefines.h",
+		"/home/varun/stoch_2_0/b3m/include/b3mpacket.h",
+		"/home/varun/stoch_2_0/b3m/include/b3m.h",
+		"/home/varun/stoch_2_0/b3m/src/velocity.cpp",
+		"/home/varun/stoch_2_0/b3m/src/torque.cpp",
+		"/home/varun/Desktop/backup.txt",
+		"/home/varun/stoch_2_0/b3m/build/3000mNm7b.csv",
+		"/home/varun/stoch_2_0/b3m/include/b3mutil.h",
+		"/home/varun/stoch_2_0/b3m/build/2500mNm7b.csv",
+		"/home/varun/stoch_2_0/b3m/build/3000mNm6b.csv",
+		"/home/varun/stoch_2_0/b3m/build/3000mNm5b.csv",
+		"/home/varun/stoch_2_0/b3m/src/b3m.cpp",
+		"/home/varun/stoch_2_0/b3m/src/impedance.cpp",
+		"/home/varun/stoch_2_0/b3m/src/CMakeLists.txt",
+		"/home/varun/catkin_ws/src/my_pkg/CMakeLists.txt",
+		"/home/varun/stoch_2_0/b3m/CMakeLists.txt",
+		"/home/varun/stoch_2_0/b3m/src/position.cpp",
+		"/home/varun/stoch_2_0/b3m/src/demo.cpp",
+		"/home/varun/stoch_2_0/b3m/build/2000Nm-4.log",
+		"/home/varun/stoch_2_0/b3m/README.md",
+		"/home/varun/.bashrc",
+		"/home/varun/stoch_2_0/b3m/build/src/Makefile",
+		"/home/varun/stoch_2_0/b3m/build/src/b3m_demo",
+		"/home/varun/stoch_2_0/b3m/build/3000Nm-5.log",
+		"/home/varun/stoch_2_0/b3m/build/2200Nm-3.log",
+		"/home/varun/stoch_2_0/b3m/build/3000Nm-1.log",
+		"/home/varun/stoch_2_0/b3m/build/motor_all.log",
+		"/home/varun/stoch_2_0/b3m/build/2200Nm-2.log",
+		"/home/varun/stoch_2_0/b3m/build/2200Nm.log",
+		"/home/varun/stoch_2_0/b3m/build/2000Nm.log",
+		"/home/varun/stoch_2_0/b3m/build/2000Nm-2.log",
+		"/home/varun/stoch_2_0/b3m/build/2000Nm-3.log",
+		"/home/varun/stoch_2_0/b3m/include/b3mcommon.h",
+		"/home/varun/stoch_2_0/b3m/libaqua/include/Thread.h",
+		"/home/varun/stoch_2_0/b3m/build/CMakeCache.txt",
+		"/home/varun/stoch_2_0/qpOASES/doc/html/index.html",
+		"/home/varun/Stoch 2.0/b3m/README.md",
+		"/home/varun/mavros_ws/src/qp_planner/src/qp_matrix.py",
+		"/home/varun/mavros_ws/src/qp_planner/src/planner2.py",
+		"/home/varun/Stoch 2.0/b3m/libaqua/include/Console.h",
+		"/home/varun/Stoch 2.0/b3m/libaqua/include/Thread.h",
+		"/home/varun/Stoch 2.0/b3m/src/torque.cpp",
+		"/home/varun/Stoch 2.0/b3m/src/position.cpp",
+		"/home/varun/catkin_ws/src/stoch_two_urdf/urdf/stoch_two_urdf.urdf",
+		"/home/varun/Stoch 2.0/b3m/src/b3m.cpp",
+		"/home/varun/Stoch 2.0/b3m/src/CMakeLists.txt",
+		"/home/varun/Stoch 2.0/b3m/CMakeLists.txt",
+		"/home/varun/Stoch 2.0/b3m/License.txt",
+		"/home/varun/catkin_ws/src/stoch_two_urdf/launch/display.launch",
+		"/home/varun/catkin_ws/src/stoch_two_urdf/config/joint_controllers.yaml",
+		"/home/varun/catkin_ws/src/arexx_ros_control/launch/arexx_gazebo.launch",
+		"/home/varun/catkin_ws/src/arexx_ros_control/scripts/test.py",
+		"/home/varun/catkin_ws/src/stoch_two_urdf/launch/gazebo.launch",
+		"/media/varun/VARUN V P/stoch_IK/IK.py",
+		"/media/varun/VARUN V P/stoch_IK/traj.py",
+		"/home/varun/catkin_ws/src/stoch_two_urdf/CMakeLists.txt",
+		"/home/varun/catkin_ws/src/arexx_ros_control/urdf/arexx.urdf",
+		"/home/varun/catkin_ws/src/arexx_ros_control/config/arexx.yaml",
+		"/home/varun/catkin_ws/src/stoch_two_urdf/config/joint_names_stoch_two_urdf.yaml",
+		"/home/varun/model_editor_models/arexx/model.sdf",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/my_pkg/src/DJI/pid.py",
+		"/home/varun/catkin_ws/src/arexx_ros_control/launch/arexx.launch",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/brick_detection/src/brick_detection.py",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/usb_cam/launch/usb_cam-test.launch",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/my_pkg/src/DJI/s900_pid_nav1.py",
+		"/home/varun/catkin_ws/src/stoch_two_urdf/urdf/stoch_2.urdf",
+		"/home/varun/model_editor_models/stoch_two_urdf_closed_loop/stoch_2.urdf",
+		"/home/varun/model_editor_models/stoch_two_urdf_closed_loop/model.sdf",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_leaves/example_nodes/cpp/bharrat.py",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_leaves/example_nodes/cpp/action_example.cpp",
+		"/home/varun/src/Firmware/launch/mavros_posix_sitl.launch",
+		"/home/varun/src/Firmware/Tools/sitl_gazebo/worlds/empty.world",
+		"/home/varun/src/Firmware/Tools/sitl_gazebo/models/iris/iris.sdf",
+		"/usr/share/gazebo-9/worlds/wind_demo.world",
+		"/home/varun/mavros_ws/src/qp_implementation/src/drone_control.py",
+		"/home/varun/src/Firmware/Tools/sitl_gazebo/models/rotors_description/urdf/iris_base.sdf",
+		"/home/varun/src/Firmware/Tools/sitl_gazebo/worlds/uneven.world",
+		"/home/varun/src/Firmware/Tools/sitl_gazebo/worlds/matrice_100.world",
+		"/home/varun/src/Firmware/Tools/sitl_gazebo/worlds/iris_rplidar.world",
+		"/home/varun/src/Firmware/launch/posix_sitl.launch",
+		"/home/varun/src/Firmware/Tools/sitl_gazebo/models/rotors_description/urdf/iris.xacro",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_leaves/example_nodes/cpp/bt_action.h",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_core/src/gtest/external_ros_nodes_test.cpp",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_leaves/src/action_client.cpp",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_core/src/actions/ros_action.cpp",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_core/include/actions/ros_action.h",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_core/action/BT.action",
+		"/usr/share/gazebo-9/worlds/empty.world",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_core/src/gtest/gtest_tree.cpp",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_core/src/actions/action_test_node.cpp",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/custom_msgs/msg/BrickDetection.msg",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/custom_msgs/msg/CenterArea.msg",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/my_pkg/src/landing.cpp",
+		"/home/varun/src/Firmware/LaunchSinglePX4.sh",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/custom_msgs/CMakeLists.txt",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/my_pkg/src/DJI/brickdet_test.py",
+		"/home/varun/mavros_ws/src/qp_planner/src/drone_control.py",
+		"/home/varun/mavros_ws/src/qp_implementation/src/auto_takeoff.py",
+		"/media/varun/RR/brick_detection.py",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/my_pkg/src/ball_2.4.py",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/brick_detection/src/camera_read_brick_detection.py",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/qp_implementation/src/auto_takeoff.py",
+		"/home/varun/catkin_ws/src/stoch_two_urdf/package.xml",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_core/templates/action_node_template.cpp",
+		"/run/user/1000/gvfs/sftp:host=10.42.0.226,user=nvidia/home/nvidia/catkin_ws/src/custom_msgs/msg/center.msg",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/BTUserManual.pdf",
+		"/home/varun/gazebo_plugins/object_motions/simple_robot_description/src/CMakeLists.txt",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_core/include/conditions/condition_test_node.h",
+		"/home/varun/mavros_ws/src/qp_planner/src/turtle_control.py",
+		"/home/varun/gazebo_plugins/object_motions/simple_robot_description/src/ellipse_equation.cpp",
+		"/home/varun/mavros_ws/my_pkg/src/landing.cpp",
+		"/home/varun/mavros_ws/src/MBZIRC_control/src/challenge2/landing/landing.cpp",
+		"/home/varun/mavros_ws/src/MBZIRC_control/src/auto_takeoff.py",
+		"/home/varun/odroid_ws/my_pkg/src/teleop_twist_keyboard.py",
+		"/home/varun/mavros_ws/src/qp_planner/src/MPC_obstacle_avoidance.py",
+		"/run/user/1000/gvfs/sftp:host=192.168.0.29,user=nvidia/home/nvidia/catkin_ws/src/my_pkg/src/auto_takeoff.py",
+		"/home/varun/src/Firmware/Tools/sitl_gazebo/worlds/iris.world",
+		"/home/varun/Downloads/ardupilot_gazebo-master/worlds/iris_arducopter_runway.world",
+		"/home/varun/src/Firmware/Tools/sitl_gazebo/models/rotors_description/urdf/iris_base.urdf",
+		"/home/varun/catkin_ws/src/ROS-Behavior-Tree/behavior_tree_leaves/example_nodes/python/action_example.py",
+		"/home/varun/Downloads/ardupilot_gazebo-master/models/iris_with_ardupilot/model.sdf",
+		"/home/varun/ardupilot_gazebo/gazebo_worlds/iris_arducopter_runway.world",
+		"/home/varun/Downloads/ardupilot_gazebo-master/models/iris_with_standoffs/model.sdf",
+		"/home/varun/ardupilot_gazebo/CMakeLists.txt",
+		"/home/varun/ardupilot_gazebo/README.md",
+		"/home/varun/Downloads/ardupilot_gazebo-master/CMakeLists.txt",
+		"/run/user/1000/gvfs/sftp:host=192.168.0.29,user=nvidia/home/nvidia/test.py"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 466.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"SET_VELOCITY",
+			"eigen3",
+			"ncurses",
+			"baud",
+			"ADDRESS_MOTOR_CURRENT",
+			"TORQUE_MIN",
+			"limit",
+			"current",
+			"angle",
+			"signum",
+			"exit",
+			"/********************************************************",
+			"exit",
+			"sendPacket",
+			"motor",
+			"br_hip_link",
+			"fl_upper_hip_link",
+			"fl_lower_hip_joint",
+			"fl_upper_hip_link",
+			"br_lower_hip_link",
+			"motor_fr_hip_joint",
+			"motor_fr_knee_joint",
+			"motor",
+			"upper_knee",
+			"motor",
+			"upper_hip",
+			"upper_",
+			"upper_hip",
+			"motor_br_upper_hip_joint",
+			"upper_hip",
+			"Motor",
+			"_joint",
+			"height",
+			"JOINT",
+			"bl_lower_hip_link",
+			"bl_lower_hip_link_",
+			"bl_lower_hip_link_J",
+			"/home/varun/catkin_ws/src/",
+			"wind",
+			"1.9312",
+			"1.9",
+			"1.7",
+			"1.9",
+			"1.96893",
+			"1.9",
+			"1.96889",
+			"1.93131",
+			"1.88404",
+			"1.88402",
+			"1.8",
+			"1.9",
+			"1.88404",
+			"1.8",
+			"1.88402",
+			"1.8",
+			"pose frame",
+			"0 0 ",
+			"0 0 2",
+			"2",
+			"ode",
+			"image_pose",
+			"update_im",
+			"print",
+			"flag",
+			"vs_",
+			"vs",
+			"vs_flag",
+			"tolara",
+			"image_pose",
+			"simple_image_in",
+			"brick_msg",
+			"update_image",
+			"image_pose",
+			"update_image",
+			"update",
+			"update_image",
+			"boxx",
+			"twist_obj",
+			"mavros",
+			"intial",
+			"take",
+			"lidar",
+			"point",
+			"update_pose",
+			"intial",
+			"ros",
+			"move2goal",
+			"hip_link\">",
+			"hip_link\"",
+			"hip_link",
+			"hip",
+			"stoch_two_urdf",
+			"file",
+			"model",
+			"xacro",
+			"gazebo_cxx",
+			"set_mode",
+			"set_arming",
+			"mp4",
+			"bt_action",
+			"python",
+			"print",
+			"brick_an",
+			"arm",
+			"BrickDetection",
+			"brick",
+			"offboa",
+			"ROS_INFO",
+			"pz",
+			"gaus",
+			"gaussia",
+			"App",
+			"image_converter",
+			"do",
+			"imshow",
+			"boxw",
+			"des_dist",
+			"rng_offset",
+			"msg1",
+			"desired_velocity1",
+			"linear",
+			"armin",
+			"offbo",
+			"callback",
+			"actionnode",
+			"actionnodetemplate",
+			"action_node_template",
+			"simple_action_client.h"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"encoder",
+			"knee",
+			"hip",
+			"_hip",
+			"_motor",
+			"",
+			"-0.0688",
+			"-0.03107",
+			"-0.0311",
+			"-0.06869",
+			"-0.11596",
+			"-0.11598",
+			"-0.11596",
+			"-0.11598",
+			"stoch_two_rigid",
+			"/home/varun/ardupilot_gazebo/gazebo_models/office_building/meshes/office_building.dae<",
+			"my_msg1",
+			"test1",
+			"front_cam1",
+			"down_cam1",
+			"front",
+			"front_cam",
+			"down_cam",
+			"front_cam",
+			"forward_camera_joint",
+			"forward_camera_link",
+			"~",
+			"redUpper",
+			"redLower",
+			"",
+			"<name>Gazebo/Yellow</name>",
+			"<enable_wind>1</enable_wind>",
+			"MBZIRC_Arena",
+			"",
+			"load_red_bricks",
+			"4",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 158.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GitSavvy":
+	{
+		"height": 133.0
+	},
+	"output.exec":
+	{
+		"height": 278.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.show_commit_info":
+	{
+		"height": 120.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 126.0
+	},
+	"pinned_build_system": "",
+	"project": "motor_logging.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/.ros/rtabmapGUI.ini"
+			],
+			[
+				"zed",
+				"~/vins_ws/src/VINS-Mono/config/zed/zed_config_no_extrinsic.yaml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"calc_target_cb"
+			]
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 337.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -4,7 +4,7 @@
 
 #include "b3m.h"
 #include "Console.h"
-
+#include <qpOASES.hpp>
 
 using namespace kondo;
 #define BAUDRATE 1500000
@@ -13,7 +13,7 @@ using namespace kondo;
 #define TORQUE_MIN -32768
 #define TORQUE_MAX 32768
 
-#define SET_TORQUE 300  // mili Newton meter
+#define SET_TORQUE 1500  // mili Newton meter
 
 B3M* pb3m;
 int current;
@@ -59,28 +59,30 @@ int  main(int argc, char* argv[]) {
   signal(SIGINT, signalHandler);
 
   auto start_loop = std::chrono::steady_clock::now();
-  float time_loop = 15;
+  float time_loop = 10;
 
   while(std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start_loop).count() < time_loop) 
   {
-    auto start = std::chrono::steady_clock::now();
+    // auto start = std::chrono::steady_clock::now();
 
     pb3m->setTargetCurrent(0, SET_TORQUE);
 
-    current = pb3m->getActualCurrent(0);
+    // current = pb3m->getActualCurrent(0);
 
     int16_t vel = pb3m->getActualVelocity(0);
-    std::cout<<"vel: "<<vel<<std::endl;
+    // std::cout<<"vel: "<<vel<<std::endl;
     // auto end = std::chrono::steady_clock::now();
-    encoder = pb3m->getEncoderCount(0);
+    // encoder = pb3m->getEncoderCount(0);
     // total_encoder = pb3m->getEncoderTotalCount(0);
     // motor_temp = pb3m->getMotorTemperature(0);
     // mcu_temp = pb3m->getMCUTemperature(0);
     ssr::Thread::Sleep(1);  
 
-    auto end = std::chrono::steady_clock::now();
-    std::cout << current << ","  << encoder << ",";
-    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << std::endl;
+    // auto end = std::chrono::steady_clock::now();
+    // std::cout << current << ","  << encoder << "," 
+    std::cout << vel <<  std::endl;
+    // std::cout << "vel:" << vel << std::endl;
+    // std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << std::endl;
     //<< total_encoder << "\t\t" << motor_temp << "\t\t" << std::endl;
 
 

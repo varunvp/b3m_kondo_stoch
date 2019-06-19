@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/varun/stoch_2_0/b3m/src/b3m.cpp" "/home/varun/stoch_2_0/b3m/build/src/CMakeFiles/b3m.dir/b3m.cpp.o"
+  "/home/varun/stoch_2_0/b3m_old/src/b3m.cpp" "/home/varun/stoch_2_0/b3m_old/build/src/CMakeFiles/b3m.dir/b3m.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/varun/stoch_2_0/qpOASES/include"
   "../src/../include"
   "../src/../libaqua/include"
   )

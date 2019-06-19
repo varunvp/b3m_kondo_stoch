@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -std=c++11
 
 CXX_DEFINES = -Db3m_EXPORTS
 
-CXX_INCLUDES = -I/home/varun/stoch_2_0/b3m/src/../include -I/home/varun/stoch_2_0/b3m/src/../libaqua/include 
+CXX_INCLUDES = -I/home/varun/stoch_2_0/qpOASES/include -I/home/varun/stoch_2_0/b3m_old/src/../include -I/home/varun/stoch_2_0/b3m_old/src/../libaqua/include 
 

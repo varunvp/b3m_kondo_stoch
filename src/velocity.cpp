@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-// #include <cstdlib>
+#include <chrono>
 #include <cstring>
 
 using namespace kondo;
@@ -61,9 +61,12 @@ int  main(int argc, char* argv[]) {
   
   pb3m->setTargetVelocity(id, SET_VELOCITY);
 
-  for(;;){
+  auto start_loop = std::chrono::steady_clock::now();
+  float time_loop = 50;
+
+  while(std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start_loop).count() < time_loop) {
     int16_t vel = pb3m->getActualVelocity(0);
-    std::cout<<vel<<std::endl;
+    std::cout << vel << "," << pb3m->getActualCurrent(0) << std::endl;
   }
   
 
@@ -71,5 +74,8 @@ int  main(int argc, char* argv[]) {
   } catch (std::exception& e) {
     std::cout << "Exception : " << e.what() << std::endl;
   }
+  pb3m->setTargetCurrent(0, 0);
+  pb3m->setMode(0, OPERATION_MODE_FREE);
+
   return 0;
 }

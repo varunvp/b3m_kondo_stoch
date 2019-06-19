@@ -321,7 +321,7 @@ namespace kondo {
      * @param id ID
      * @return Velocity [deg/100sec]
      */
-    int16_t getActualVelocity(const ID_t id) { return readShort<int16_t>(id, ADDRESS_TARGET_VELOCITY); }
+    int16_t getActualVelocity(const ID_t id) { return readShort<int16_t>(id, ADDRESS_ACTUAL_VELOCITY); }
 
     /**
      * Reset Motor

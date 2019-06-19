@@ -178,11 +178,11 @@ type.h
 stdint.h
 -
 
-/home/varun/stoch_2_0/b3m/src/impedance.cpp
+/home/varun/stoch_2_0/b3m_old/src/impedance.cpp
 iostream
 -
 b3m.h
-/home/varun/stoch_2_0/b3m/src/b3m.h
+/home/varun/stoch_2_0/b3m_old/src/b3m.h
 Console.h
-/home/varun/stoch_2_0/b3m/src/Console.h
+/home/varun/stoch_2_0/b3m_old/src/Console.h
 

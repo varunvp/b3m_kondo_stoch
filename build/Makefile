@@ -48,46 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/varun/stoch_2_0/b3m
+CMAKE_SOURCE_DIR = /home/varun/stoch_2_0/b3m_old
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/varun/stoch_2_0/b3m/build
+CMAKE_BINARY_DIR = /home/varun/stoch_2_0/b3m_old/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"library\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -122,11 +89,33 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"library\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/varun/stoch_2_0/b3m/build/CMakeFiles /home/varun/stoch_2_0/b3m/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/varun/stoch_2_0/b3m_old/build/CMakeFiles /home/varun/stoch_2_0/b3m_old/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/varun/stoch_2_0/b3m/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/varun/stoch_2_0/b3m_old/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -155,30 +144,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named b3m
+# Target rules for targets named velocity
 
 # Build rule for target.
-b3m: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 b3m
-.PHONY : b3m
+velocity: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 velocity
+.PHONY : velocity
 
 # fast build rule for target.
-b3m/fast:
-	$(MAKE) -f src/CMakeFiles/b3m.dir/build.make src/CMakeFiles/b3m.dir/build
-.PHONY : b3m/fast
-
-#=============================================================================
-# Target rules for targets named b3m_demo
-
-# Build rule for target.
-b3m_demo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 b3m_demo
-.PHONY : b3m_demo
-
-# fast build rule for target.
-b3m_demo/fast:
-	$(MAKE) -f src/CMakeFiles/b3m_demo.dir/build.make src/CMakeFiles/b3m_demo.dir/build
-.PHONY : b3m_demo/fast
+velocity/fast:
+	$(MAKE) -f src/CMakeFiles/velocity.dir/build.make src/CMakeFiles/velocity.dir/build
+.PHONY : velocity/fast
 
 #=============================================================================
 # Target rules for targets named position
@@ -194,6 +170,63 @@ position/fast:
 .PHONY : position/fast
 
 #=============================================================================
+# Target rules for targets named qp_test
+
+# Build rule for target.
+qp_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 qp_test
+.PHONY : qp_test
+
+# fast build rule for target.
+qp_test/fast:
+	$(MAKE) -f src/CMakeFiles/qp_test.dir/build.make src/CMakeFiles/qp_test.dir/build
+.PHONY : qp_test/fast
+
+#=============================================================================
+# Target rules for targets named b3m_demo
+
+# Build rule for target.
+b3m_demo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 b3m_demo
+.PHONY : b3m_demo
+
+# fast build rule for target.
+b3m_demo/fast:
+	$(MAKE) -f src/CMakeFiles/b3m_demo.dir/build.make src/CMakeFiles/b3m_demo.dir/build
+.PHONY : b3m_demo/fast
+
+# Manual pre-install relink rule for target.
+b3m_demo/preinstall:
+	$(MAKE) -f src/CMakeFiles/b3m_demo.dir/build.make src/CMakeFiles/b3m_demo.dir/preinstall
+.PHONY : b3m_demo/preinstall
+
+#=============================================================================
+# Target rules for targets named b3m
+
+# Build rule for target.
+b3m: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 b3m
+.PHONY : b3m
+
+# fast build rule for target.
+b3m/fast:
+	$(MAKE) -f src/CMakeFiles/b3m.dir/build.make src/CMakeFiles/b3m.dir/build
+.PHONY : b3m/fast
+
+#=============================================================================
+# Target rules for targets named example1
+
+# Build rule for target.
+example1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example1
+.PHONY : example1
+
+# fast build rule for target.
+example1/fast:
+	$(MAKE) -f src/CMakeFiles/example1.dir/build.make src/CMakeFiles/example1.dir/build
+.PHONY : example1/fast
+
+#=============================================================================
 # Target rules for targets named torque
 
 # Build rule for target.
@@ -205,19 +238,6 @@ torque: cmake_check_build_system
 torque/fast:
 	$(MAKE) -f src/CMakeFiles/torque.dir/build.make src/CMakeFiles/torque.dir/build
 .PHONY : torque/fast
-
-#=============================================================================
-# Target rules for targets named velocity
-
-# Build rule for target.
-velocity: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 velocity
-.PHONY : velocity
-
-# fast build rule for target.
-velocity/fast:
-	$(MAKE) -f src/CMakeFiles/velocity.dir/build.make src/CMakeFiles/velocity.dir/build
-.PHONY : velocity/fast
 
 #=============================================================================
 # Target rules for targets named impedance
@@ -238,17 +258,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... b3m"
-	@echo "... b3m_demo"
-	@echo "... position"
-	@echo "... torque"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... velocity"
+	@echo "... position"
+	@echo "... qp_test"
+	@echo "... b3m_demo"
+	@echo "... b3m"
+	@echo "... example1"
+	@echo "... torque"
 	@echo "... impedance"
 .PHONY : help
 

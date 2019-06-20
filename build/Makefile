@@ -227,6 +227,19 @@ example1/fast:
 .PHONY : example1/fast
 
 #=============================================================================
+# Target rules for targets named pd_test
+
+# Build rule for target.
+pd_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pd_test
+.PHONY : pd_test
+
+# fast build rule for target.
+pd_test/fast:
+	$(MAKE) -f src/CMakeFiles/pd_test.dir/build.make src/CMakeFiles/pd_test.dir/build
+.PHONY : pd_test/fast
+
+#=============================================================================
 # Target rules for targets named torque
 
 # Build rule for target.
@@ -269,6 +282,7 @@ help:
 	@echo "... b3m_demo"
 	@echo "... b3m"
 	@echo "... example1"
+	@echo "... pd_test"
 	@echo "... torque"
 	@echo "... impedance"
 .PHONY : help

@@ -2,7 +2,7 @@
  *	This file is part of qpOASES.
  *
  *	qpOASES -- An Implementation of the Online Active Set Strategy.
- *	Copyright (C) 2007-2017 by Hans Joachim Ferreau, Andreas Potschka,
+ *	Copyright (C) 2007-2015 by Hans Joachim Ferreau, Andreas Potschka,
  *	Christian Kirches et al. All rights reserved.
  *
  *	qpOASES is free software; you can redistribute it and/or
@@ -25,8 +25,8 @@
 /**
  *	\file examples/example1.cpp
  *	\author Hans Joachim Ferreau
- *	\version 3.2
- *	\date 2007-2017
+ *	\version 3.1
+ *	\date 2007-2015
  *
  *	Very simple example for testing qpOASES using the QProblem class.
  */
@@ -42,13 +42,13 @@ int main( )
 	USING_NAMESPACE_QPOASES
 
 	/* Setup data of first QP. */
-	real_t H[2*2] = { 1.0, 0.0, 0.0, 0.5 };
-	real_t A[1*2] = { 1.0, 1.0 };
-	real_t g[2] = { 1.5, 1.0 };
-	real_t lb[2] = { 0.5, -2.0 };
-	real_t ub[2] = { 5.0, 2.0 };
-	real_t lbA[1] = { -1.0 };
-	real_t ubA[1] = { 2.0 };
+	real_t H[2*2] = { 1.0, 0.0, 0.0, 1 };
+	real_t A[1*2] = { -1.0, 51.5  };
+	real_t g[2] = { 0.0, 0.0 };
+	real_t lb[2] = {-10000,-30000};
+	real_t ub[2] ={10000, 30000};
+	real_t lbA[1] = {-INFTY};
+	real_t ubA[1] = { 57.5*356*-1};
 
 	/* Setup data of second QP. */
 	real_t g_new[2] = { 1.0, 1.5 };
@@ -77,19 +77,17 @@ int main( )
 			xOpt[0],xOpt[1],yOpt[0],yOpt[1],yOpt[2],example.getObjVal() );
 	
 	/* Solve second QP. */
-	nWSR = 10;
-	example.hotstart( g_new,lb_new,ub_new,lbA_new,ubA_new, nWSR );
+	// nWSR = 10;
+	// example.hotstart( g_new,lb_new,ub_new,lbA_new,ubA_new, nWSR );
 
-	/* Get and print solution of second QP. */
-	example.getPrimalSolution( xOpt );
-	example.getDualSolution( yOpt );
-	printf( "\nxOpt = [ %e, %e ];  yOpt = [ %e, %e, %e ];  objVal = %e\n\n", 
-			xOpt[0],xOpt[1],yOpt[0],yOpt[1],yOpt[2],example.getObjVal() );
+	// /* Get and print solution of second QP. */
+	// example.getPrimalSolution( xOpt );
+	// example.getDualSolution( yOpt );
+	// printf( "\nxOpt = [ %e, %e ];  yOpt = [ %e, %e, %e ];  objVal = %e\n\n", 
+	// 		xOpt[0],xOpt[1],yOpt[0],yOpt[1],yOpt[2],example.getObjVal() );
 
-	example.printOptions();
+	// example.printOptions();
 	/*example.printProperties();*/
-
-	/*getGlobalMessageHandler()->listAllMessages();*/
 
 	return 0;
 }

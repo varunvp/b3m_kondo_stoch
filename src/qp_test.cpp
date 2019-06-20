@@ -33,7 +33,6 @@ void signalHandler( int signum ) {
 int  main(int argc, char* argv[]) {
  
     // ssr::init_scr();
-  USING_NAMESPACE_QPOASES
 
   std::cout << "---- Torque Test Program ----" << std::endl;
   if (argc <= 1) {
@@ -60,21 +59,20 @@ int  main(int argc, char* argv[]) {
   signal(SIGINT, signalHandler);
 
   auto start_loop = std::chrono::steady_clock::now();
-  float time_loop = 10;
-  real_t desired_pos= 150;
-  real_t Ko = 0.01;
-  real_t Kp = 2;
-  real_t Kd = 1;
-  real_t H[2*2] = {1.0, 0.0, 0.0, 1.0};
-  real_t g[2] = {0.0, 0.0};
-  real_t lb[2] = {-10000,-3000};
-  real_t ub[2] = {10000, 3000};
-  real_t lbA[1] = {-1000};
+  float time_loop = 5;
+  qpOASES::real_t desired_pos= 200;
+  qpOASES::real_t Ko = 1;
+  qpOASES::real_t Kp = 10;
+  qpOASES::real_t Kd = 0.0;
+  qpOASES::real_t H[2*2] = {1.0, 0.0, 0.0, 1.0};
+  qpOASES::real_t g[2] = {0.0, 0.0};
+  qpOASES::real_t lb[2] = {-qpOASES::INFTY,-3000};
+  qpOASES::real_t ub[2] = {qpOASES::INFTY, 3000};
+  qpOASES::real_t lbA[1] = {-qpOASES::INFTY};
+  float set_torque = SET_TORQUE;
   while(std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start_loop).count() < time_loop) 
   {
     // auto start = std::chrono::steady_clock::now();
-
-    pb3m->setTargetCurrent(0, SET_TORQUE);
 
     // current = pb3m->getActualCurrent(0);
 
@@ -82,19 +80,24 @@ int  main(int argc, char* argv[]) {
     // std::cout<<"vel: "<<vel<<std::endl;
     // auto end = std::chrono::steady_clock::now();
     float encoder_raw = pb3m->getEncoderCount(0);
-    real_t current_pos = (encoder_raw / 4096) * 360;
+    qpOASES::real_t current_pos = (encoder_raw / 4096) * 360;
 
-    real_t error= desired_pos- current_pos;
+    qpOASES::real_t error= desired_pos- current_pos;
 
-    real_t A[1*2]={-1, Ko * error + current_vel};
-    real_t ubA[1] = {-1 * (Ko*error + current_vel)*(Kp*error + Kd * current_vel)};
-    int_fast32_t nV = 2;
-    int_fast32_t nC = 1;
-    QProblem var1;
+    qpOASES::real_t A[1*2]={-1, Ko * error + current_vel};
+    qpOASES::real_t ubA[1] = {-1 * (Ko*error + current_vel)*(Kp*error + Kd * current_vel)};
+    qpOASES::QProblem solver(2,1);
+    qpOASES::Options options;
+    options.printLevel = qpOASES::PL_NONE;
+    solver.setOptions( options );
+
+    int nWSR = 100;
+    solver.init(H,g,A,lb,ub,lbA, ubA, nWSR);
+
+    qpOASES::real_t xOpt[2];
+    solver.getPrimalSolution( xOpt );
 
 
-    int nWSR = 10;
-    var1.init(H,g,A,lb,ub,lbA, ubA, nWSR);
     // example.init(SymmetricMatrix *_H, const real_t *const _g, Matrix *_A, const real_t *const _lb, const real_t *const _ub, const real_t *const _lbA, const real_t *const _ubA, int_t &nWSR)
     // total_encoder = pb3m->getEncoderTotalCount(0);
     // motor_temp2 = pb3m->getMotorTemperature(0);
@@ -104,7 +107,11 @@ int  main(int argc, char* argv[]) {
 
     // auto end = std::chrono::steady_clock::now();
     // std::cout << current << ","  << encoder << "," 
-    std::cout << current_vel <<  std::endl;
+    std::cout << "error: " << error<< " Optimal Set Torque: "<< xOpt[1]<< " Current Velocity: "<<current_vel<<std::endl;
+    set_torque = xOpt[1];
+
+    pb3m->setTargetCurrent(0, -set_torque);
+
     // std::cout << "vel:" << vel << std::endl;
     // std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << std::endl;
     //<< total_encoder << "\t\t" << motor_temp << "\t\t" << std::endl;

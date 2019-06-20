@@ -49,4 +49,5 @@ add_executable (qp_test qp_test.cpp)
 target_link_libraries(qp_test ${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT} qpOASES)
 # /home/varun/stoch_2_0/qpOASES/bin/libqpOASES.so blas lapack)
 
-
+add_executable (pd_test pd_test.cpp)
+target_link_libraries(pd_test ${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT} qpOASES)

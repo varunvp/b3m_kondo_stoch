@@ -89,17 +89,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -110,6 +99,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -237,6 +237,21 @@ example1: src/CMakeFiles/example1.dir/rule
 example1/fast:
 	cd /home/varun/stoch_2_0/b3m_old/build && $(MAKE) -f src/CMakeFiles/example1.dir/build.make src/CMakeFiles/example1.dir/build
 .PHONY : example1/fast
+
+# Convenience name for target.
+src/CMakeFiles/pd_test.dir/rule:
+	cd /home/varun/stoch_2_0/b3m_old/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/pd_test.dir/rule
+.PHONY : src/CMakeFiles/pd_test.dir/rule
+
+# Convenience name for target.
+pd_test: src/CMakeFiles/pd_test.dir/rule
+
+.PHONY : pd_test
+
+# fast build rule for target.
+pd_test/fast:
+	cd /home/varun/stoch_2_0/b3m_old/build && $(MAKE) -f src/CMakeFiles/pd_test.dir/build.make src/CMakeFiles/pd_test.dir/build
+.PHONY : pd_test/fast
 
 # Convenience name for target.
 src/CMakeFiles/torque.dir/rule:
@@ -376,6 +391,33 @@ impedance.cpp.s:
 	cd /home/varun/stoch_2_0/b3m_old/build && $(MAKE) -f src/CMakeFiles/impedance.dir/build.make src/CMakeFiles/impedance.dir/impedance.cpp.s
 .PHONY : impedance.cpp.s
 
+pd_test.o: pd_test.cpp.o
+
+.PHONY : pd_test.o
+
+# target to build an object file
+pd_test.cpp.o:
+	cd /home/varun/stoch_2_0/b3m_old/build && $(MAKE) -f src/CMakeFiles/pd_test.dir/build.make src/CMakeFiles/pd_test.dir/pd_test.cpp.o
+.PHONY : pd_test.cpp.o
+
+pd_test.i: pd_test.cpp.i
+
+.PHONY : pd_test.i
+
+# target to preprocess a source file
+pd_test.cpp.i:
+	cd /home/varun/stoch_2_0/b3m_old/build && $(MAKE) -f src/CMakeFiles/pd_test.dir/build.make src/CMakeFiles/pd_test.dir/pd_test.cpp.i
+.PHONY : pd_test.cpp.i
+
+pd_test.s: pd_test.cpp.s
+
+.PHONY : pd_test.s
+
+# target to generate assembly for a file
+pd_test.cpp.s:
+	cd /home/varun/stoch_2_0/b3m_old/build && $(MAKE) -f src/CMakeFiles/pd_test.dir/build.make src/CMakeFiles/pd_test.dir/pd_test.cpp.s
+.PHONY : pd_test.cpp.s
+
 position.o: position.cpp.o
 
 .PHONY : position.o
@@ -499,10 +541,11 @@ help:
 	@echo "... b3m_demo"
 	@echo "... b3m"
 	@echo "... example1"
+	@echo "... pd_test"
 	@echo "... torque"
-	@echo "... install/local"
-	@echo "... impedance"
 	@echo "... edit_cache"
+	@echo "... impedance"
+	@echo "... install/local"
 	@echo "... b3m.o"
 	@echo "... b3m.i"
 	@echo "... b3m.s"
@@ -515,6 +558,9 @@ help:
 	@echo "... impedance.o"
 	@echo "... impedance.i"
 	@echo "... impedance.s"
+	@echo "... pd_test.o"
+	@echo "... pd_test.i"
+	@echo "... pd_test.s"
 	@echo "... position.o"
 	@echo "... position.i"
 	@echo "... position.s"

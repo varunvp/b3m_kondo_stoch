@@ -59,17 +59,27 @@ int  main(int argc, char* argv[]) {
   signal(SIGINT, signalHandler);
 
   auto start_loop = std::chrono::steady_clock::now();
-  float time_loop = 5;
-  qpOASES::real_t desired_pos= 200;
-  qpOASES::real_t Ko = 1;
-  qpOASES::real_t Kp = 10;
+  float time_loop = 3;
+
+  qpOASES::real_t desired_pos= 90;
+  qpOASES::real_t Ko = 0.0001;
+  qpOASES::real_t Kp = 200;
   qpOASES::real_t Kd = 0.0;
-  qpOASES::real_t H[2*2] = {1.0, 0.0, 0.0, 1.0};
+  qpOASES::real_t H[2*2] = {0.1, 0.0, 0.0, 1.0};
   qpOASES::real_t g[2] = {0.0, 0.0};
-  qpOASES::real_t lb[2] = {-qpOASES::INFTY,-3000};
-  qpOASES::real_t ub[2] = {qpOASES::INFTY, 3000};
+  qpOASES::real_t lb[2] = {-qpOASES::INFTY,-3500};
+  qpOASES::real_t ub[2] = {qpOASES::INFTY, 3500};
   qpOASES::real_t lbA[1] = {-qpOASES::INFTY};
+
+
   float set_torque = SET_TORQUE;
+  std::cout<<pb3m->getKd1(0)<<" "<<pb3m->getKp1(0)<<std::endl;
+  float steady_state_error = 0;
+  float amplitude_error = 0;
+  float amplitude_error_count = 0;
+  int oscillation_count = 0;
+  int initial_sign =  1;
+  int steady_state_error_count = 0;
   while(std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start_loop).count() < time_loop) 
   {
     // auto start = std::chrono::steady_clock::now();
@@ -80,9 +90,40 @@ int  main(int argc, char* argv[]) {
     // std::cout<<"vel: "<<vel<<std::endl;
     // auto end = std::chrono::steady_clock::now();
     float encoder_raw = pb3m->getEncoderCount(0);
+
     qpOASES::real_t current_pos = (encoder_raw / 4096) * 360;
 
-    qpOASES::real_t error= desired_pos- current_pos;
+    qpOASES::real_t error= current_pos-desired_pos;
+    if(error > 180)
+    {
+      error = error - 360;
+    }
+
+    if(initial_sign * error > 0)
+    {
+      initial_sign = initial_sign * -1;
+      oscillation_count = oscillation_count + 1;
+    }
+
+    if(oscillation_count >= 1)
+    {
+      steady_state_error = steady_state_error + error;
+      steady_state_error_count = steady_state_error_count + 1;
+    }
+    if(oscillation_count >= 1)
+    {
+      float abs_error = 0;
+      if(error >= 0)
+      {
+        abs_error = error;
+      }
+      else
+      {
+        abs_error = -1 * error;
+      }
+      amplitude_error = amplitude_error + abs_error;
+      amplitude_error_count = amplitude_error_count + 1;
+    }
 
     qpOASES::real_t A[1*2]={-1, Ko * error + current_vel};
     qpOASES::real_t ubA[1] = {-1 * (Ko*error + current_vel)*(Kp*error + Kd * current_vel)};
@@ -91,7 +132,7 @@ int  main(int argc, char* argv[]) {
     options.printLevel = qpOASES::PL_NONE;
     solver.setOptions( options );
 
-    int nWSR = 100;
+    int nWSR = 10;
     solver.init(H,g,A,lb,ub,lbA, ubA, nWSR);
 
     qpOASES::real_t xOpt[2];
@@ -110,7 +151,7 @@ int  main(int argc, char* argv[]) {
     std::cout << "error: " << error<< " Optimal Set Torque: "<< xOpt[1]<< " Current Velocity: "<<current_vel<<std::endl;
     set_torque = xOpt[1];
 
-    pb3m->setTargetCurrent(0, -set_torque);
+    pb3m->setTargetCurrent(0, set_torque);
 
     // std::cout << "vel:" << vel << std::endl;
     // std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << std::endl;
@@ -118,8 +159,12 @@ int  main(int argc, char* argv[]) {
 
 
   }
-
+  steady_state_error = steady_state_error / steady_state_error_count;
+  amplitude_error = amplitude_error/ amplitude_error_count;
   std::cout << "Program Ended.\n";
+  std::cout << "Oscillation count: "<<oscillation_count<<std::endl;
+  std::cout << "Steady State error : "<<steady_state_error<<std::endl;
+  std::cout << "Amplitude Error : "<<amplitude_error<<std::endl;
 
    // cleanup and close up stuff here  
    // terminate program  

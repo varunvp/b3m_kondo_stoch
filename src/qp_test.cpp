@@ -2,6 +2,7 @@
 
 #include <chrono>
 
+#include "matplotlibcpp.h"
 #include "b3m.h"
 #include "Console.h"
 #include <qpOASES.hpp>

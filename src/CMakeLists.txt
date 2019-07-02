@@ -6,8 +6,10 @@ set(_demo_srcs demo.cpp)
 include_directories(/home/varun/stoch_2_0/qpOASES/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../libaqua/include)
+include_directories(/usr/include/python2.7 /usr/local/lib/python2.7/dist-packages/numpy/core/include/)
 
 find_package(Threads)
+find_package(PythonLibs 2.7)
 find_library(LIBQPOASES qpOASES /home/varun/stoch_2_0/qpOASES/bin)
 
 link_directories(/home/varun/stoch_2_0/qpOASES/bin)
@@ -15,6 +17,8 @@ add_library(${PROJECT_NAME} SHARED ${_srcs})
 
 add_executable(${PROJECT_NAME}_demo ${_demo_srcs})
 target_link_libraries(${PROJECT_NAME}_demo ${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT})
+
+target_include_directories(${PROJECT_NAME} PRIVATE ${PYTHON_INCLUDE_DIRS})
 
 install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_demo
     EXPORT ${PROJECT_NAME}
@@ -46,7 +50,7 @@ add_executable (example1 example1.cpp)
 target_link_libraries(example1 ${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT} /home/varun/stoch_2_0/qpOASES/bin/libqpOASES.a blas lapack)
 
 add_executable (qp_test qp_test.cpp)
-target_link_libraries(qp_test ${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT} qpOASES)
+target_link_libraries(qp_test ${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT} qpOASES ${PYTHON_LIBRARIES})
 # /home/varun/stoch_2_0/qpOASES/bin/libqpOASES.so blas lapack)
 
 add_executable (pd_test pd_test.cpp)
